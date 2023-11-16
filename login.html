@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Authentication</title>
+<script>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth,GoogleAuthProvider,FacebookAuthProvider,TwitterAuthProvider,signInWithPopup } from "firebase/auth";
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAu4LtTOHUxxUx6-OLsdb6H2jhvXCGea60",
+  authDomain: "auth-12e9a.firebaseapp.com",
+  projectId: "auth-12e9a",
+  storageBucket: "auth-12e9a.appspot.com",
+  messagingSenderId: "900291226825",
+  appId: "1:900291226825:web:210c47d2440ebb64627118"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth=getAuth();
+</script>
+   
+    <style>
+        body{
+            background-color: teal;
+        }
+        .login-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .login-buttons button {
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .google-button {
+            background-color: #DB4437;
+            color: white;
+        }
+        .facebook-button {
+            background-color: #3b5998;
+            color: white;
+        }
+        .twitter-button {
+            background-color: #1DA1F2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2>Firebase Authentication</h2>
+
+    <div id="firebaseui-auth-container"></div>
+
+    <div class="login-buttons">
+        <button class="google-button" onclick="signInWithGoogle()">Login with Google</button>
+        <button class="facebook-button" onclick="signInWithFacebook()">Login with Facebook</button>
+        <button class="twitter-button" onclick="signInWithTwitter()">Login with Twitter</button>
+    </div>
+
+    <script>
+        function signInWithGoogle() {
+           var provider = new GoogleAuthProvider();
+            signInWithPopup(auth,provider)
+                .then((result) => {
+                   
+                    console.log(result);
+                })
+                .catch((error) => {
+                   
+                    console.error(error);
+                });
+        }
+
+        function signInWithFacebook() {
+            var provider = new FacebookAuthProvider();
+            signInWithPopup(auth,provider)
+                .then((result) => {
+                  
+                    console.log(result);
+                })
+                .catch((error) => {
+                  
+                    console.error(error);
+                });
+        }
+
+        function signInWithTwitter() {
+            var provider = new TwitterAuthProvider();
+            signInWithPopup(auth,provider)
+                .then((result) => {
+                    
+                    console.log(result);
+                })
+                .catch((error) => {
+                  
+                    console.error(error);
+                });
+        }
+    </script>
+   </center>
+ 
+
+</body>
+</html>
