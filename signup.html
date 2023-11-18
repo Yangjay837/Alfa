@@ -1,0 +1,90 @@
+<!Doctype html>
+<html>
+<head>
+	<title>Register Form</title>
+	<style type="text/css">
+		input [type="submit"]{
+			cursor: pointer;
+		}
+	</style>
+	
+</head>
+<body>
+	<style type="text/css">
+		body{ 
+			background:url("image/ff.jpeg")no-repeat;background-size: cover;
+			background-origin: content-box; font-family: arial;
+		 }
+		 form{ 
+		 	top:50%;left: 50%;transform:translate(-50%, -50%);background-color: #fff;
+		 	width: 550px;height:400px;padding:20px;position:absolute;
+		 }
+		 input[type="text"],input[name="password"]{
+		 	background: #eee;padding:10px;border:1px solid #ccc;width: 220px;border-radius: 4px;
+		 }
+		 input[type="submit"]{
+		 	padding: 10px;width:244px;background:#444;color:#fff; border:none;
+		 	border-radius: 3px;outline:none;cursor:pointer;
+
+		 	}
+		 	input[type="submit"]{
+		 	background: #333;}
+		 </style>
+
+	<center>
+		<h3>SIGN UP</h3>
+		<form action="methods=">
+			<table>
+				<tr>
+					<td>Username:</td>
+					<td>
+						<input type="text"name
+						="user" placeholder="Enter name here">
+					</td>
+				</tr>
+				<tr>
+					<td>Password:</td>
+					<td> 
+						<input type="Password"name="user_pass" placeholder="Enter Password here">
+					</td>
+				</tr>
+				<tr>
+					<td>Email:</td>
+					<td>
+						<input type="email" name="mail" placeholder="Enter email here">
+					</td>
+				</tr>
+				<tr>
+					<td>Gender:</td>
+					<td>
+						<input  type="radio"name="Gender">Male
+							<input type="radio"name="Gender">Female
+							<input type="radio"name="Gender">Others
+					</td>
+				</tr>
+				<tr>
+					<td>phone:</td>
+					<td>
+						<select>
+							<option selected>+254</option
+							>
+							<option>+255</option>
+							<option>+256</option>
+							<option>+257</option>
+							<option>+258</option>
+						</select>
+						<input type="phone"name="mobile" placeholder="753637892" maxlength="9 ">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit"name="submit" value="submit">
+					</td>
+					<td>
+						already a user?<a href="login.html">sign in</a>
+					</td>
+				</tr>
+
+			</table>
+	</center>
+</body>

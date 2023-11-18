@@ -27,7 +27,9 @@ const auth=getAuth();
    
     <style>
         body{
-            background-color: teal;
+            background:url("image/ff.jpeg")no-repeat;background-size: cover;
+			background-origin: content-box; font-family: arial;
+            
         }
         .login-buttons {
             display: flex;
@@ -55,19 +57,49 @@ const auth=getAuth();
             background-color: #1DA1F2;
             color: white;
         }
+       h2{
+        color: white;
+       }
+       p{
+        color: #eee;
+       }
     </style>
 </head>
 <body>
     <center>
+       
     <h2>Firebase Authentication</h2>
 
     <div id="firebaseui-auth-container"></div>
-
+    <tr>
+        <tb>
     <div class="login-buttons">
-        <button class="google-button" onclick="signInWithGoogle()">Login with Google</button>
-        <button class="facebook-button" onclick="signInWithFacebook()">Login with Facebook</button>
-        <button class="twitter-button" onclick="signInWithTwitter()">Login with Twitter</button>
+      
+       
+    </tb>
+        <tb>
+        <button class="google-button" onclick="signInWithGoogle()">Login with Google:</button>
+        <input type="text"value="Enter Account">
+
+        </tb>
+        <tb>
+
+        <button class="facebook-button" onclick="signInWithFacebook()">Login with Facebook:</button>
+        <input type="text"value="Enter Account">
+        </tb>
+        <tb>
+        <button class="twitter-button" onclick="signInWithTwitter()">Login with Twitter:</button>
+        <input type="text"value="Enter Account">
+        </tb>
+        <tb>
+            <button>Sign in</button>
+            <tr>
+            <p>Not yet a member?<button><a href="signup.html">Sign Up</a></button> </p>
+            </tr>
+        </tb>
     </div>
+    </tr>
+
 
     <script>
         function signInWithGoogle() {
